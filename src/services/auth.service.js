@@ -6,11 +6,17 @@ const API_URL = 'http://localhost:8080/api/auth/'
 class AuthService {
   login(user) {
     const self = this
+    var captchaDom = document.querySelector('#g-recaptcha-response')
+
+    var captcha = null
+    if (captchaDom != null) {
+      captcha = captchaDom.value
+    }
     return axios
       .post(API_URL + 'login', {
         email: user.email,
         password: user.password,
-        captcha: document.querySelector('#g-recaptcha-response').value
+        captcha: captcha
       })
       .then(response => {
         return response.data

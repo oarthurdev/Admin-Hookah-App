@@ -3,7 +3,7 @@
     <el-form ref="loginForm" class="login-form" autocomplete="on" label-position="left" style="margin-top: 100px;">
 
       <div class="title-container">
-        <h3 class="title">Hookah Finder</h3>
+        <h1 class="title">Hookah Finder</h1>
       </div>
 
       <el-form-item prop="username">
